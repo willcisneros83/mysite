@@ -6,8 +6,8 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
 def index(request):
-    if request.user.is_authenticate:
-        return render(request,'home.html')
+    if request.user.is_authenticated:
+        return render(request,'index.html')
     else:
         return redirect('/login')
 
